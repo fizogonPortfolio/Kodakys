@@ -590,7 +590,7 @@ content="Official website of Koda Kys (Kaiden Queen)."
     }
 
     .Album img {
-        width: 100%;
+        width: 50%;
         aspect-ratio: 1;
         object-fit: cover;
         border: 1px solid #444;
@@ -676,9 +676,8 @@ content="Official website of Koda Kys (Kaiden Queen)."
     .MusicItem {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        gap: 20px;
-        padding: 18px 20px;
+        gap: 18px;
+        padding: 12px;
         border: 1px solid #363636;
         border-left: 3px solid #555;
         background: rgba(8, 8, 8, 0.9);
@@ -703,6 +702,30 @@ content="Official website of Koda Kys (Kaiden Queen)."
             0 0 22px rgba(255, 45, 145, 0.09);
     }
 
+    .MusicCover {
+        width: 75px;
+        height: 75px;
+        flex-shrink: 0;
+        object-fit: cover;
+        border: 1px solid #444;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+        transition:
+            transform 0.35s ease,
+            border-color 0.3s ease,
+            filter 0.3s ease;
+    }
+
+    .MusicItem:hover .MusicCover {
+        transform: scale(1.05);
+        border-color: #ff2d91;
+        filter: brightness(1.08);
+    }
+
+    .MusicInfo {
+        flex: 1;
+        min-width: 0;
+    }
+
     .MusicItem h3 {
         font-family: "Anton", sans-serif;
         font-size: 25px;
@@ -723,19 +746,30 @@ content="Official website of Koda Kys (Kaiden Queen)."
         margin-top: 2px;
     }
 
-    .MusicItem > span {
-        font-size: 25px;
-        color: #ff2d91;
+    .ListenButton {
+        flex-shrink: 0;
+        padding: 10px 18px;
+        border: 1px solid #555;
+        background: #111;
+        color: #eee;
+        font-family: "Oswald", sans-serif;
+        font-size: 14px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
         transition:
-            transform 0.25s ease,
-            color 0.25s ease,
-            text-shadow 0.25s ease;
+            background 0.2s ease,
+            border-color 0.2s ease,
+            transform 0.2s ease,
+            box-shadow 0.2s ease;
     }
 
-    .MusicItem:hover > span {
-        transform: translateX(7px);
-        color: #ff65ac;
-        text-shadow: 0 0 12px rgba(255, 45, 145, 0.45);
+    .ListenButton:hover {
+        background: #252525;
+        border-color: #ff2d91;
+        transform: translateY(-2px);
+        box-shadow:
+            0 6px 18px rgba(0, 0, 0, 0.35),
+            0 0 18px rgba(255, 45, 145, 0.15);
     }
 
     .TopThree {
@@ -746,8 +780,8 @@ content="Official website of Koda Kys (Kaiden Queen)."
 
     .TopItem {
         position: relative;
-        min-height: 180px;
-        padding: 25px;
+        min-height: 340px;
+        padding: 15px;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
@@ -773,28 +807,45 @@ content="Official website of Koda Kys (Kaiden Queen)."
             0 0 25px rgba(255, 255, 255, 0.12);
     }
 
+    .TopCover {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.55;
+        filter: grayscale(15%);
+        transition:
+            transform 0.5s ease,
+            opacity 0.4s ease,
+            filter 0.4s ease;
+    }
+
+    .TopItem:hover .TopCover {
+        transform: scale(1.05);
+        opacity: 0.7;
+        filter: grayscale(0%);
+    }
+
     .TopItem::before {
         content: "";
         position: absolute;
         inset: 0;
+        z-index: 1;
         background: linear-gradient(
-            transparent 25%,
-            rgba(0, 0, 0, 0.9)
+            transparent 15%,
+            rgba(0, 0, 0, 0.95) 90%
         );
-        transition: opacity 0.3s ease;
-    }
-
-    .TopItem:hover::before {
-        opacity: 0.8;
     }
 
     .TopNumber {
         position: absolute;
         top: 10px;
         right: 15px;
+        z-index: 2;
         font-family: "Anton", sans-serif;
         font-size: 65px;
-        color: #292929;
+        color: rgba(255, 255, 255, 0.15);
         transition:
             transform 0.4s ease,
             color 0.4s ease;
@@ -802,18 +853,17 @@ content="Official website of Koda Kys (Kaiden Queen)."
 
     .TopItem:hover .TopNumber {
         transform: scale(1.08) rotate(-2deg);
-        color: #383838;
+        color: rgba(255, 45, 145, 0.3);
     }
 
-    .TopItem h3,
-    .TopItem p {
+    .TopInfo {
         position: relative;
-        z-index: 1;
+        z-index: 2;
     }
 
     .TopItem h3 {
         font-family: "Anton", sans-serif;
-        font-size: 25px;
+        font-size: 28px;
         transition:
             transform 0.3s ease,
             letter-spacing 0.3s ease;
@@ -826,7 +876,37 @@ content="Official website of Koda Kys (Kaiden Queen)."
 
     .TopItem p {
         margin-top: 5px;
-        color: #888;
+        color: #aaa;
+    }
+
+    .TopListen {
+        position: relative;
+        z-index: 2;
+        display: inline-block;
+        width: fit-content;
+        margin-top: 12px;
+        padding: 9px 17px;
+        border: 1px solid #555;
+        background: rgba(10, 10, 10, 0.9);
+        color: #eee;
+        font-family: "Oswald", sans-serif;
+        font-size: 13px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        transition:
+            background 0.2s ease,
+            border-color 0.2s ease,
+            transform 0.2s ease,
+            box-shadow 0.2s ease;
+    }
+
+    .TopListen:hover {
+        background: #252525;
+        border-color: #ff2d91;
+        transform: translateY(-2px);
+        box-shadow:
+            0 6px 18px rgba(0, 0, 0, 0.35),
+            0 0 18px rgba(255, 45, 145, 0.15);
     }
 
     .SexyCoda {
@@ -1254,8 +1334,20 @@ content="Official website of Koda Kys (Kaiden Queen)."
         }
 
         .MusicItem {
-            align-items: flex-start;
-            flex-direction: column;
+            align-items: center;
+        }
+
+        .MusicCover {
+            width: 60px;
+            height: 60px;
+        }
+
+        .ListenButton {
+            padding: 9px 13px;
+        }
+
+        .TopItem {
+            min-height: 320px;
         }
 
         .DonationForm {
@@ -1348,11 +1440,11 @@ content="Official website of Koda Kys (Kaiden Queen)."
 
 <a href="merch.html" class="MerchCTA">
 
-    <h3>NEW MERCH OUT NOW</h3>
+<h3>NEW MERCH OUT NOW</h3>
 
-    <p>
-        Check out the latest <span>Koda Kys</span> merchandise.
-    </p>
+<p>
+    Check out the latest <span>Koda Kys</span> merchandise.
+</p>
 
 </a>
 
@@ -1367,11 +1459,11 @@ content="Official website of Koda Kys (Kaiden Queen)."
 
 <div class="About">
 
-    <p>
-        <span>Koda Kys</span> is the artist project of Kaiden Queen.
-        Explore the music, releases, photos and everything
-        surrounding <span>Koda Kys</span> here.
-    </p>
+<p>
+    <span>Koda Kys</span> is the artist project of Kaiden Queen.
+    Explore the music, releases, photos and everything
+    surrounding <span>Koda Kys</span> here.
+</p>
 
 </div>
 
@@ -1386,31 +1478,31 @@ content="Official website of Koda Kys (Kaiden Queen)."
 
 <div class="Album">
 
-    <img
-        src="Images/AlbumJATL.png"
-        alt="I WAS JUST ABOUT TO LEAVE album artwork"
+<img
+    src="Images/AlbumJATL.png"
+    alt="I WAS JUST ABOUT TO LEAVE album artwork"
+>
+
+<div class="AlbumInfo">
+
+    <h3>
+        Coming Soon
+    </h3>
+
+    <p>
+        Coming soon.
+    </p>
+
+    <a
+        href="https://open.spotify.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="Button"
     >
+        Listen On Spotify
+    </a>
 
-    <div class="AlbumInfo">
-
-        <h3>
-            Coming Soon
-        </h3>
-
-        <p>
-            Coming soon.
-        </p>
-
-        <a
-            href="https://open.spotify.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="Button"
-        >
-            Listen On Spotify
-        </a>
-
-    </div>
+</div>
 
 </div>
 
@@ -1425,22 +1517,36 @@ content="Official website of Koda Kys (Kaiden Queen)."
 
 <div class="MusicList">
 
-    <a
-        href="#"
-        class="MusicItem"
+<div class="MusicItem">
+
+    <img
+        src="Images/AlbumJATL.png"
+        alt="Soon cover"
+        class="MusicCover"
     >
 
-        <div>
+    <div class="MusicInfo">
 
-            <h3>Soon</h3>
+        <h3>
+            Soon
+        </h3>
 
-            <p>Latest release</p>
+        <p>
+            Latest release · <span>Koda Kys</span>
+        </p>
 
-        </div>
+    </div>
 
-        <span>→</span>
-
+    <a
+        href="https://open.spotify.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="ListenButton"
+    >
+        Listen
     </a>
+
+</div>
 
 </div>
 
@@ -1455,11 +1561,19 @@ content="Official website of Koda Kys (Kaiden Queen)."
 
 <div class="TopThree">
 
-    <div class="TopItem">
+<div class="TopItem">
 
-        <div class="TopNumber">
-            01
-        </div>
+    <img
+        src="Images/AlbumJATL.png"
+        alt="Soon cover"
+        class="TopCover"
+    >
+
+    <div class="TopNumber">
+        01
+    </div>
+
+    <div class="TopInfo">
 
         <h3>
             Soon
@@ -1469,13 +1583,32 @@ content="Official website of Koda Kys (Kaiden Queen)."
             <span>Koda Kys</span>
         </p>
 
+        <a
+            href="https://open.spotify.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="TopListen"
+        >
+            Listen
+        </a>
+
     </div>
 
-    <div class="TopItem">
+</div>
 
-        <div class="TopNumber">
-            02
-        </div>
+<div class="TopItem">
+
+    <img
+        src="Images/AlbumJATL.png"
+        alt="Soon cover"
+        class="TopCover"
+    >
+
+    <div class="TopNumber">
+        02
+    </div>
+
+    <div class="TopInfo">
 
         <h3>
             Soon
@@ -1485,13 +1618,32 @@ content="Official website of Koda Kys (Kaiden Queen)."
             <span>Koda Kys</span>
         </p>
 
+        <a
+            href="https://open.spotify.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="TopListen"
+        >
+            Listen
+        </a>
+
     </div>
 
-    <div class="TopItem">
+</div>
 
-        <div class="TopNumber">
-            03
-        </div>
+<div class="TopItem">
+
+    <img
+        src="Images/AlbumJATL.png"
+        alt="Soon cover"
+        class="TopCover"
+    >
+
+    <div class="TopNumber">
+        03
+    </div>
+
+    <div class="TopInfo">
 
         <h3>
             Soon
@@ -1501,7 +1653,18 @@ content="Official website of Koda Kys (Kaiden Queen)."
             <span>Koda Kys</span>
         </p>
 
+        <a
+            href="https://open.spotify.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="TopListen"
+        >
+            Listen
+        </a>
+
     </div>
+
+</div>
 
 </div>
 
@@ -1516,20 +1679,20 @@ content="Official website of Koda Kys (Kaiden Queen)."
 
 <div class="SexyCoda">
 
-    <img
-        src="Images/Image1.jpg"
-        alt="Koda Kys"
-    >
+<img
+    src="Images/Image1.jpg"
+    alt="Koda Kys"
+>
 
-    <img
-        src="Images/Image2.jpg"
-        alt="Koda Kys"
-    >
+<img
+    src="Images/Image2.jpg"
+    alt="Koda Kys"
+>
 
-    <img
-        src="Images/Image3.jpg"
-        alt="Koda Kys"
-    >
+<img
+    src="Images/Image3.jpg"
+    alt="Koda Kys"
+>
 
 </div>
 
@@ -1543,39 +1706,39 @@ content="Official website of Koda Kys (Kaiden Queen)."
 
 <div class="Socials">
 
-    <a
-        href="https://www.instagram.com/koda.kys"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="Social"
-    >
-        Instagram
-    </a>
+<a
+    href="https://www.instagram.com/koda.kys"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="Social"
+>
+    Instagram
+</a>
 
-    <a
-        href="https://www.youtube.com/koda.kys"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="Social"
-    >
-        YouTube
-    </a>
+<a
+    href="https://www.youtube.com/koda.kys"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="Social"
+>
+    YouTube
+</a>
 
-    <a
-        href="https://open.spotify.com/koda.kys"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="Social"
-    >
-        Spotify
-    </a>
+<a
+    href="https://open.spotify.com/koda.kys"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="Social"
+>
+    Spotify
+</a>
 
-    <a
-        href="#"
-        class="Social"
-    >
-        TikTok
-    </a>
+<a
+    href="#"
+    class="Social"
+>
+    TikTok
+</a>
 
 </div>
 
@@ -1598,46 +1761,46 @@ content="Official website of Koda Kys (Kaiden Queen)."
 
 <div class="Support">
 
-    <div class="DonationBox">
+<div class="DonationBox">
 
-        <h3>
-            SUPPORT FIZOGON (Web Designer)
-        </h3>
+    <h3>
+        SUPPORT FIZOGON (Web Designer)
+    </h3>
 
-        <p>
-            Enter an amount to support the website.
-        </p>
+    <p>
+        Enter an amount to support the website.
+    </p>
 
-        <form class="DonationForm" id="DonationForm">
+    <form class="DonationForm" id="DonationForm">
 
-            <input
-                type="number"
-                id="DonationAmount"
-                class="DonationInput"
-                min="1"
-                step="0.01"
-                inputmode="decimal"
-                placeholder="Amount in GBP"
-                aria-label="Donation amount"
-                required
-            >
+        <input
+            type="number"
+            id="DonationAmount"
+            class="DonationInput"
+            min="1"
+            step="0.01"
+            inputmode="decimal"
+            placeholder="Amount in GBP"
+            aria-label="Donation amount"
+            required
+        >
 
-            <button
-                type="submit"
-                class="DonateButton"
-            >
-                Donate
-            </button>
+        <button
+            type="submit"
+            class="DonateButton"
+        >
+            Donate
+        </button>
 
-        </form>
+    </form>
 
-        <div
-            class="DonationError"
-            id="DonationError"
-            aria-live="polite"
-        ></div>
+    <div
+        class="DonationError"
+        id="DonationError"
+        aria-live="polite"
+    ></div>
 
-    </div>
+</div>
 
 </div>
 

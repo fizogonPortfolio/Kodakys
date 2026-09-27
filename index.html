@@ -1,0 +1,1774 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Koda Kys (Kaiden Queen) — Official Website</title>
+
+<meta
+name="description"
+content="The official website of Koda Kys (Kaiden Queen). Discover music, releases, merch, photos and social media."
+
+>
+
+<meta
+name="keywords"
+content="Koda Kys, KodaKys, Kaiden Queen, music, artist, singer, songs, merch"
+
+>
+
+<meta name="author" content="Koda Kys">
+
+<link rel="canonical" href="https://KodaKys.com/">
+
+<meta property="og:title" content="Koda Kys (Kaiden Queen) — Official Website">
+
+<meta
+property="og:description"
+content="Official website of Koda Kys (Kaiden Queen)."
+
+>
+
+<meta property="og:url" content="https://kodakys.com/">
+
+<meta property="og:type" content="website">
+
+<link rel="icon" type="image/png" href="Images/ImageArt.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+>
+
+<style>
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        min-height: 100vh;
+        overflow-x: hidden;
+        font-family: "Oswald", sans-serif;
+        color: #f2f2f2;
+        background:
+            linear-gradient(
+                rgba(5, 5, 5, 0.88),
+                rgba(5, 5, 5, 0.96)
+            ),
+            repeating-linear-gradient(
+                0deg,
+                #181818 0px,
+                #181818 2px,
+                #0d0d0d 2px,
+                #0d0d0d 5px
+            );
+    }
+
+    body::before {
+        content: "";
+        position: fixed;
+        inset: -10%;
+        pointer-events: none;
+
+        background:
+            radial-gradient(
+                circle at 12% 12%,
+                rgba(255, 45, 145, 0.42),
+                transparent 28%
+            ),
+            radial-gradient(
+                circle at 88% 18%,
+                rgba(255, 215, 45, 0.3),
+                transparent 28%
+            ),
+            radial-gradient(
+                circle at 18% 78%,
+                rgba(55, 125, 255, 0.3),
+                transparent 30%
+            ),
+            radial-gradient(
+                circle at 82% 82%,
+                rgba(45, 205, 115, 0.3),
+                transparent 30%
+            );
+
+        opacity: 0.7;
+        z-index: -2;
+        animation:
+            BackgroundPulse 9s ease-in-out infinite alternate,
+            BackgroundMove 20s ease-in-out infinite alternate;
+    }
+
+    body::after {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        background:
+            linear-gradient(
+                rgba(5, 5, 5, 0.12),
+                rgba(5, 5, 5, 0.48)
+            );
+        z-index: -1;
+    }
+
+    @keyframes BackgroundPulse {
+
+        from {
+            opacity: 0.5;
+        }
+
+        to {
+            opacity: 0.76;
+        }
+
+    }
+
+    @keyframes BackgroundMove {
+
+        from {
+            transform: scale(1);
+        }
+
+        to {
+            transform: scale(1.08);
+        }
+
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    img {
+        display: block;
+        max-width: 100%;
+    }
+
+    button,
+    a {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    span {
+        color: #ff2d91;
+        text-shadow: 0 0 10px rgba(255, 45, 145, 0.18);
+    }
+
+    .Page {
+        width: 100%;
+        min-height: 100vh;
+    }
+
+    .Header {
+        width: 100%;
+        padding: 25px 20px;
+        border-bottom: 1px solid #444;
+        background: rgba(5, 5, 5, 0.92);
+        box-shadow:
+            0 5px 25px rgba(0, 0, 0, 0.55),
+            0 0 25px rgba(255, 255, 255, 0.08);
+        text-align: center;
+        animation: HeaderEnter 1s ease forwards;
+        transition:
+            border-color 0.3s ease,
+            box-shadow 0.3s ease;
+    }
+
+    .Header:hover {
+        border-color: #666;
+        box-shadow:
+            0 5px 25px rgba(0, 0, 0, 0.55),
+            0 0 30px rgba(255, 255, 255, 0.13);
+    }
+
+    @keyframes HeaderEnter {
+
+        from {
+            opacity: 0;
+            transform: translateY(-25px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+    }
+
+    .Logo {
+        display: inline-block;
+        font-family: "Anton", sans-serif;
+        font-size: clamp(55px, 12vw, 110px);
+        line-height: 0.9;
+        letter-spacing: 2px;
+        color: #f1f1f1;
+        text-shadow:
+            4px 4px 0 #111,
+            7px 7px 0 #333,
+            0 0 20px rgba(255, 255, 255, 0.06);
+        animation:
+            LogoEnter 1.2s cubic-bezier(.2,.8,.2,1) forwards,
+            LogoFloat 5s ease-in-out 1.5s infinite;
+        transition:
+            transform 0.35s ease,
+            text-shadow 0.35s ease,
+            letter-spacing 0.35s ease;
+    }
+
+    .Logo:hover {
+        transform: scale(1.025);
+        letter-spacing: 4px;
+        text-shadow:
+            4px 4px 0 #111,
+            7px 7px 0 #333,
+            0 0 30px rgba(255, 255, 255, 0.18);
+    }
+
+    @keyframes LogoEnter {
+
+        from {
+            opacity: 0;
+            transform: scale(0.92) translateY(-10px);
+            letter-spacing: 12px;
+        }
+
+        to {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+            letter-spacing: 2px;
+        }
+
+    }
+
+    @keyframes LogoFloat {
+
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-3px);
+        }
+
+    }
+
+    .Official {
+        margin-top: 10px;
+        font-size: 13px;
+        letter-spacing: 5px;
+        color: #aaa;
+        text-transform: uppercase;
+        opacity: 0;
+        animation: OfficialEnter 1s ease 0.5s forwards;
+        transition:
+            color 0.3s ease,
+            letter-spacing 0.3s ease;
+    }
+
+    .Header:hover .Official {
+        color: #ddd;
+        letter-spacing: 6px;
+    }
+
+    @keyframes OfficialEnter {
+
+        from {
+            opacity: 0;
+            transform: translateY(8px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+    }
+
+    .Container {
+        width: min(1050px, calc(100% - 30px));
+        margin: auto;
+    }
+
+    .Intro {
+        margin: 35px auto 45px;
+        padding: 30px;
+        border: 1px solid #444;
+        background: rgba(8, 8, 8, 0.9);
+        box-shadow:
+            0 12px 35px rgba(0, 0, 0, 0.45),
+            0 0 22px rgba(255, 255, 255, 0.09);
+        text-align: center;
+        opacity: 0;
+        transform: translateY(30px);
+        animation: IntroEnter 1s ease 0.7s forwards;
+        transition:
+            border-color 0.35s ease,
+            transform 0.35s ease,
+            box-shadow 0.35s ease;
+    }
+
+    .Intro:hover {
+        border-color: #666;
+        transform: translateY(-3px);
+        box-shadow:
+            0 18px 40px rgba(0, 0, 0, 0.5),
+            0 0 30px rgba(255, 255, 255, 0.14);
+    }
+
+    @keyframes IntroEnter {
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+    }
+
+    .Intro h1 {
+        display: inline-block;
+        font-family: "Anton", sans-serif;
+        font-size: clamp(35px, 7vw, 65px);
+        letter-spacing: 1px;
+        text-shadow: 0 0 18px rgba(255, 255, 255, 0.05);
+        transition:
+            transform 0.35s ease,
+            letter-spacing 0.35s ease,
+            text-shadow 0.35s ease;
+    }
+
+    .Intro:hover h1 {
+        transform: scale(1.025);
+        letter-spacing: 2px;
+        text-shadow: 0 0 22px rgba(255, 255, 255, 0.15);
+    }
+
+    .Intro p {
+        margin-top: 10px;
+        color: #aaa;
+        font-size: 17px;
+        line-height: 1.5;
+        transition: color 0.3s ease;
+    }
+
+    .Intro:hover p {
+        color: #d0d0d0;
+    }
+
+    .Section {
+        margin: 55px 0;
+        opacity: 0;
+        transform: translateY(45px);
+        transition:
+            opacity 0.8s ease,
+            transform 0.8s cubic-bezier(.2,.8,.2,1);
+    }
+
+    .Section.Visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .SectionTitle {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 25px;
+    }
+
+    .SectionTitle h2 {
+        position: relative;
+        font-family: "Anton", sans-serif;
+        font-size: clamp(28px, 5vw, 45px);
+        white-space: nowrap;
+        letter-spacing: 1px;
+        transform: translateX(-15px);
+        opacity: 0;
+        transition:
+            transform 0.35s ease,
+            opacity 0.7s ease,
+            letter-spacing 0.35s ease,
+            color 0.35s ease,
+            text-shadow 0.35s ease;
+    }
+
+    .SectionTitle h2::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        width: 0;
+        height: 2px;
+        background: #ff2d91;
+        box-shadow: 0 0 8px rgba(255, 45, 145, 0.35);
+        transition: width 0.35s ease;
+    }
+
+    .SectionTitle h2:hover {
+        color: #fff;
+        letter-spacing: 2px;
+        text-shadow: 0 0 18px rgba(255, 255, 255, 0.15);
+    }
+
+    .SectionTitle h2:hover::after {
+        width: 100%;
+    }
+
+    .Section.Visible .SectionTitle h2 {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    .SectionTitle span {
+        height: 1px;
+        flex: 1;
+        background: #4a4a4a;
+        color: #444;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition:
+            transform 0.8s ease 0.15s,
+            background 0.35s ease;
+    }
+
+    .Section.Visible .SectionTitle span {
+        transform: scaleX(1);
+    }
+
+    .SectionTitle:hover span {
+        background: #777;
+    }
+
+    .MerchCTA {
+        position: relative;
+        display: block;
+        padding: 35px 25px;
+        border: 1px solid #444;
+        background: rgba(8, 8, 8, 0.92);
+        text-align: center;
+        overflow: hidden;
+        box-shadow:
+            0 10px 30px rgba(0, 0, 0, 0.4),
+            0 0 20px rgba(255, 255, 255, 0.08);
+        transition:
+            background 0.25s ease,
+            border-color 0.25s ease,
+            transform 0.25s ease,
+            box-shadow 0.25s ease;
+    }
+
+    .MerchCTA::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 60%;
+        height: 100%;
+        background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 45, 145, 0.08),
+            transparent
+        );
+        transform: skewX(-20deg);
+        transition: left 0.7s ease;
+    }
+
+    .MerchCTA:hover::before {
+        left: 140%;
+    }
+
+    .MerchCTA:hover {
+        background: rgba(25, 25, 25, 0.95);
+        border-color: #777;
+        transform: translateY(-5px);
+        box-shadow:
+            0 15px 35px rgba(0, 0, 0, 0.4),
+            0 0 30px rgba(255, 255, 255, 0.14);
+    }
+
+    .MerchCTA h3 {
+        position: relative;
+        font-family: "Anton", sans-serif;
+        font-size: 38px;
+        letter-spacing: 1px;
+        transition:
+            letter-spacing 0.3s ease,
+            transform 0.3s ease,
+            text-shadow 0.3s ease;
+    }
+
+    .MerchCTA:hover h3 {
+        letter-spacing: 2px;
+        transform: scale(1.02);
+        text-shadow: 0 0 18px rgba(255, 255, 255, 0.12);
+    }
+
+    .MerchCTA p {
+        position: relative;
+        margin-top: 8px;
+        color: #999;
+        font-size: 16px;
+    }
+
+    .About {
+        padding: 30px;
+        border-left: 3px solid #555;
+        background: rgba(8, 8, 8, 0.84);
+        box-shadow:
+            0 10px 30px rgba(0, 0, 0, 0.35),
+            0 0 20px rgba(255, 255, 255, 0.07);
+        transition:
+            border-color 0.3s ease,
+            transform 0.3s ease,
+            background 0.3s ease,
+            box-shadow 0.3s ease;
+    }
+
+    .About:hover {
+        border-color: #ff2d91;
+        transform: translateX(4px);
+        background: rgba(12, 12, 12, 0.92);
+        box-shadow:
+            8px 12px 30px rgba(0, 0, 0, 0.2),
+            0 0 25px rgba(255, 45, 145, 0.09);
+    }
+
+    .About p {
+        color: #aaa;
+        font-size: 18px;
+        line-height: 1.7;
+        transition: color 0.3s ease;
+    }
+
+    .About:hover p {
+        color: #d0d0d0;
+    }
+
+    .Album {
+        display: grid;
+        grid-template-columns: 330px 1fr;
+        gap: 30px;
+        align-items: center;
+        padding: 25px;
+        border: 1px solid #444;
+        background: rgba(8, 8, 8, 0.9);
+        overflow: hidden;
+        box-shadow:
+            0 12px 35px rgba(0, 0, 0, 0.4),
+            0 0 20px rgba(255, 255, 255, 0.08);
+        transition:
+            border-color 0.35s ease,
+            box-shadow 0.35s ease,
+            transform 0.35s ease;
+    }
+
+    .Album:hover {
+        border-color: #666;
+        transform: translateY(-3px);
+        box-shadow:
+            0 18px 40px rgba(0, 0, 0, 0.35),
+            0 0 30px rgba(255, 255, 255, 0.13);
+    }
+
+    .Album img {
+        width: 100%;
+        aspect-ratio: 1;
+        object-fit: cover;
+        border: 1px solid #444;
+        transition:
+            transform 0.6s cubic-bezier(.2,.8,.2,1),
+            filter 0.6s ease,
+            border-color 0.4s ease,
+            box-shadow 0.4s ease;
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.08);
+    }
+
+    .Album:hover img {
+        transform: scale(1.04);
+        filter: brightness(1.1);
+        border-color: #777;
+        box-shadow: 0 0 25px rgba(255, 255, 255, 0.14);
+    }
+
+    .AlbumInfo {
+        transition: transform 0.4s ease;
+    }
+
+    .Album:hover .AlbumInfo {
+        transform: translateX(5px);
+    }
+
+    .AlbumInfo h3 {
+        font-family: "Anton", sans-serif;
+        font-size: clamp(32px, 5vw, 55px);
+        line-height: 1;
+        transition:
+            letter-spacing 0.35s ease,
+            text-shadow 0.35s ease;
+    }
+
+    .Album:hover .AlbumInfo h3 {
+        letter-spacing: 1px;
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.13);
+    }
+
+    .AlbumInfo p {
+        margin-top: 15px;
+        color: #999;
+        line-height: 1.6;
+        font-size: 17px;
+    }
+
+    .Button {
+        display: inline-block;
+        margin-top: 22px;
+        padding: 12px 22px;
+        border: 1px solid #555;
+        background: #111;
+        color: #eee;
+        font-family: "Oswald", sans-serif;
+        font-size: 15px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        box-shadow: 0 0 14px rgba(255, 255, 255, 0.06);
+        transition:
+            background 0.2s ease,
+            border-color 0.2s ease,
+            transform 0.2s ease,
+            box-shadow 0.2s ease,
+            letter-spacing 0.2s ease;
+    }
+
+    .Button:hover {
+        background: #252525;
+        border-color: #ff2d91;
+        transform: translateY(-3px);
+        box-shadow:
+            0 8px 20px rgba(0, 0, 0, 0.35),
+            0 0 20px rgba(255, 45, 145, 0.15);
+        letter-spacing: 1.5px;
+    }
+
+    .MusicList {
+        display: grid;
+        gap: 10px;
+    }
+
+    .MusicItem {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 18px 20px;
+        border: 1px solid #363636;
+        border-left: 3px solid #555;
+        background: rgba(8, 8, 8, 0.9);
+        box-shadow:
+            0 8px 25px rgba(0, 0, 0, 0.35),
+            0 0 15px rgba(255, 255, 255, 0.06);
+        transition:
+            background 0.2s ease,
+            border-left-color 0.2s ease,
+            border-color 0.2s ease,
+            transform 0.25s ease,
+            box-shadow 0.25s ease;
+    }
+
+    .MusicItem:hover {
+        background: #171717;
+        border-left-color: #ff2d91;
+        border-color: #555;
+        transform: translateX(5px);
+        box-shadow:
+            8px 10px 25px rgba(0, 0, 0, 0.2),
+            0 0 22px rgba(255, 45, 145, 0.09);
+    }
+
+    .MusicItem h3 {
+        font-family: "Anton", sans-serif;
+        font-size: 25px;
+        letter-spacing: 0.5px;
+        transition:
+            letter-spacing 0.25s ease,
+            color 0.25s ease;
+    }
+
+    .MusicItem:hover h3 {
+        letter-spacing: 1px;
+        color: #fff;
+    }
+
+    .MusicItem p {
+        color: #777;
+        font-size: 14px;
+        margin-top: 2px;
+    }
+
+    .MusicItem > span {
+        font-size: 25px;
+        color: #ff2d91;
+        transition:
+            transform 0.25s ease,
+            color 0.25s ease,
+            text-shadow 0.25s ease;
+    }
+
+    .MusicItem:hover > span {
+        transform: translateX(7px);
+        color: #ff65ac;
+        text-shadow: 0 0 12px rgba(255, 45, 145, 0.45);
+    }
+
+    .TopThree {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+
+    .TopItem {
+        position: relative;
+        min-height: 180px;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        border: 1px solid #3d3d3d;
+        background: #0a0a0a;
+        overflow: hidden;
+        box-shadow:
+            0 10px 30px rgba(0, 0, 0, 0.4),
+            0 0 17px rgba(255, 255, 255, 0.07);
+        transition:
+            transform 0.3s ease,
+            border-color 0.3s ease,
+            background 0.3s ease,
+            box-shadow 0.3s ease;
+    }
+
+    .TopItem:hover {
+        transform: translateY(-5px);
+        border-color: #666;
+        background: #101010;
+        box-shadow:
+            0 15px 30px rgba(0, 0, 0, 0.25),
+            0 0 25px rgba(255, 255, 255, 0.12);
+    }
+
+    .TopItem::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            transparent 25%,
+            rgba(0, 0, 0, 0.9)
+        );
+        transition: opacity 0.3s ease;
+    }
+
+    .TopItem:hover::before {
+        opacity: 0.8;
+    }
+
+    .TopNumber {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-family: "Anton", sans-serif;
+        font-size: 65px;
+        color: #292929;
+        transition:
+            transform 0.4s ease,
+            color 0.4s ease;
+    }
+
+    .TopItem:hover .TopNumber {
+        transform: scale(1.08) rotate(-2deg);
+        color: #383838;
+    }
+
+    .TopItem h3,
+    .TopItem p {
+        position: relative;
+        z-index: 1;
+    }
+
+    .TopItem h3 {
+        font-family: "Anton", sans-serif;
+        font-size: 25px;
+        transition:
+            transform 0.3s ease,
+            letter-spacing 0.3s ease;
+    }
+
+    .TopItem:hover h3 {
+        transform: translateX(2px);
+        letter-spacing: 0.5px;
+    }
+
+    .TopItem p {
+        margin-top: 5px;
+        color: #888;
+    }
+
+    .SexyCoda {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+
+    .SexyCoda img {
+        width: 100%;
+        aspect-ratio: 1 / 1.15;
+        object-fit: cover;
+        border: 1px solid #333;
+        filter: grayscale(15%);
+        box-shadow:
+            0 10px 30px rgba(0, 0, 0, 0.4),
+            0 0 16px rgba(255, 255, 255, 0.07);
+        transition:
+            transform 0.5s cubic-bezier(.2,.8,.2,1),
+            filter 0.5s ease,
+            border-color 0.4s ease,
+            box-shadow 0.5s ease;
+    }
+
+    .SexyCoda img:hover {
+        filter: grayscale(0%);
+        transform: scale(1.035);
+        border-color: #777;
+        box-shadow:
+            0 15px 35px rgba(0, 0, 0, 0.45),
+            0 0 28px rgba(255, 255, 255, 0.14);
+    }
+
+    .Socials {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .Social {
+        position: relative;
+        overflow: hidden;
+        padding: 18px;
+        border: 1px solid #3d3d3d;
+        background: rgba(8, 8, 8, 0.9);
+        text-align: center;
+        font-family: "Anton", sans-serif;
+        font-size: 22px;
+        letter-spacing: 1px;
+        box-shadow:
+            0 8px 25px rgba(0, 0, 0, 0.35),
+            0 0 15px rgba(255, 255, 255, 0.06);
+        transition:
+            background 0.25s ease,
+            border-color 0.25s ease,
+            transform 0.25s ease,
+            letter-spacing 0.25s ease,
+            box-shadow 0.25s ease;
+    }
+
+    .Social::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background: #ff2d91;
+        box-shadow: 0 0 8px rgba(255, 45, 145, 0.35);
+        transition: width 0.3s ease;
+    }
+
+    .Social:hover::before {
+        width: 100%;
+    }
+
+    .Social:hover {
+        background: #1a1a1a;
+        border-color: #777;
+        transform: translateY(-3px);
+        letter-spacing: 2px;
+        box-shadow:
+            0 10px 25px rgba(0, 0, 0, 0.25),
+            0 0 25px rgba(255, 255, 255, 0.12);
+    }
+
+    .Quote {
+        margin: 70px 0;
+        padding: 50px 20px;
+        border-top: 1px solid #444;
+        border-bottom: 1px solid #444;
+        text-align: center;
+        opacity: 0;
+        transform: scale(0.96);
+        transition:
+            opacity 1s ease,
+            transform 1s ease,
+            border-color 0.4s ease;
+    }
+
+    .Quote.Visible {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .Quote:hover {
+        border-color: #ff2d91;
+    }
+
+    .Quote h2 {
+        display: inline-block;
+        font-family: "Anton", sans-serif;
+        font-size: clamp(35px, 7vw, 70px);
+        letter-spacing: 2px;
+        transition:
+            letter-spacing 0.5s ease,
+            transform 0.4s ease,
+            text-shadow 0.4s ease;
+    }
+
+    .Quote:hover h2 {
+        letter-spacing: 4px;
+        transform: scale(1.015);
+        text-shadow: 0 0 22px rgba(255, 255, 255, 0.14);
+    }
+
+    .Support {
+        display: flex;
+        justify-content: center;
+    }
+
+    .DonationBox {
+        width: min(600px, 100%);
+        padding: 30px;
+        border: 1px solid #444;
+        background: rgba(8, 8, 8, 0.92);
+        text-align: center;
+        box-shadow:
+            0 12px 35px rgba(0, 0, 0, 0.4),
+            0 0 20px rgba(255, 255, 255, 0.08);
+        transition:
+            border-color 0.3s ease,
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
+    }
+
+    .DonationBox:hover {
+        border-color: #666;
+        transform: translateY(-3px);
+        box-shadow:
+            0 16px 38px rgba(0, 0, 0, 0.45),
+            0 0 28px rgba(255, 255, 255, 0.12);
+    }
+
+    .DonationBox h3 {
+        font-family: "Anton", sans-serif;
+        font-size: 32px;
+        letter-spacing: 1px;
+        transition:
+            letter-spacing 0.3s ease,
+            text-shadow 0.3s ease;
+    }
+
+    .DonationBox:hover h3 {
+        letter-spacing: 2px;
+        text-shadow: 0 0 18px rgba(255, 255, 255, 0.12);
+    }
+
+    .DonationBox p {
+        margin-top: 7px;
+        color: #888;
+        font-size: 15px;
+    }
+
+    .DonationForm {
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .DonationInput {
+        flex: 1;
+        min-width: 0;
+        padding: 14px 16px;
+        border: 1px solid #444;
+        outline: none;
+        background: #111;
+        color: #fff;
+        font-family: "Oswald", sans-serif;
+        font-size: 17px;
+        box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.03);
+        transition:
+            border-color 0.25s ease,
+            box-shadow 0.25s ease,
+            background 0.25s ease;
+    }
+
+    .DonationInput:focus {
+        border-color: #ff2d91;
+        background: #151515;
+        box-shadow:
+            inset 0 0 10px rgba(255, 255, 255, 0.03),
+            0 0 18px rgba(255, 45, 145, 0.12);
+    }
+
+    .DonationInput::placeholder {
+        color: #666;
+    }
+
+    .DonateButton {
+        padding: 14px 25px;
+        border: 1px solid #555;
+        background: #161616;
+        color: #eee;
+        font-family: "Oswald", sans-serif;
+        font-size: 16px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        cursor: pointer;
+        box-shadow: 0 0 12px rgba(255, 255, 255, 0.06);
+        transition:
+            background 0.25s ease,
+            border-color 0.25s ease,
+            transform 0.25s ease,
+            box-shadow 0.25s ease;
+    }
+
+    .DonateButton:hover {
+        background: #252525;
+        border-color: #ff2d91;
+        transform: translateY(-3px);
+        box-shadow:
+            0 8px 20px rgba(0, 0, 0, 0.35),
+            0 0 20px rgba(255, 45, 145, 0.15);
+    }
+
+    .DonationError {
+        min-height: 20px;
+        margin-top: 8px;
+        color: #aaa;
+        font-size: 13px;
+    }
+
+    footer {
+        margin-top: 70px;
+        padding: 30px 20px;
+        border-top: 1px solid #444;
+        background: rgba(5, 5, 5, 0.96);
+        text-align: center;
+        color: #666;
+        box-shadow:
+            0 -5px 25px rgba(0, 0, 0, 0.35),
+            0 0 18px rgba(255, 255, 255, 0.05);
+        transition:
+            color 0.3s ease,
+            border-color 0.3s ease;
+    }
+
+    footer:hover {
+        color: #aaa;
+        border-color: #666;
+    }
+
+    footer ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        list-style: none;
+    }
+
+    footer li {
+        font-size: 14px;
+    }
+
+    .FooterDesigner {
+        color: #666;
+    }
+
+    .FooterDesigner span {
+        color: #ff2d91;
+    }
+
+    .CookiePopup {
+        position: fixed;
+        left: 20px;
+        bottom: 20px;
+        z-index: 100;
+        width: min(400px, calc(100% - 40px));
+        padding: 20px;
+        border: 1px solid #444;
+        background: #0b0b0b;
+        box-shadow:
+            0 10px 35px rgba(0, 0, 0, 0.7),
+            0 0 20px rgba(255, 255, 255, 0.08);
+        animation: CookieEnter 0.7s cubic-bezier(.2,.8,.2,1) forwards;
+        transition:
+            border-color 0.3s ease,
+            box-shadow 0.3s ease;
+    }
+
+    .CookiePopup:hover {
+        border-color: #666;
+        box-shadow:
+            0 15px 40px rgba(0, 0, 0, 0.8),
+            0 0 25px rgba(255, 255, 255, 0.11);
+    }
+
+    @keyframes CookieEnter {
+
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+    }
+
+    .CookiePopup h3 {
+        font-family: "Anton", sans-serif;
+        font-size: 24px;
+        transition:
+            letter-spacing 0.3s ease,
+            color 0.3s ease;
+    }
+
+    .CookiePopup:hover h3 {
+        letter-spacing: 1px;
+        color: #fff;
+    }
+
+    .CookiePopup p {
+        margin-top: 7px;
+        color: #888;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .CookieButtons {
+        display: flex;
+        gap: 8px;
+        margin-top: 15px;
+    }
+
+    .CookieButtons button {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #444;
+        background: #161616;
+        color: #ddd;
+        font-family: "Oswald", sans-serif;
+        cursor: pointer;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+        transition:
+            background 0.2s ease,
+            transform 0.2s ease,
+            border-color 0.2s ease,
+            box-shadow 0.2s ease;
+    }
+
+    .CookieButtons button:hover {
+        background: #252525;
+        border-color: #ff2d91;
+        transform: translateY(-2px);
+        box-shadow: 0 0 16px rgba(255, 45, 145, 0.12);
+    }
+
+    @media (max-width: 750px) {
+
+        .Album {
+            grid-template-columns: 1fr;
+        }
+
+        .Album img {
+            max-width: 400px;
+            margin: auto;
+        }
+
+        .TopThree {
+            grid-template-columns: 1fr;
+        }
+
+        .SexyCoda {
+            grid-template-columns: 1fr;
+        }
+
+        .SexyCoda img {
+            aspect-ratio: 1;
+        }
+
+        .Socials {
+            grid-template-columns: 1fr;
+        }
+
+        .SectionTitle {
+            align-items: flex-end;
+        }
+
+        .SectionTitle h2 {
+            white-space: normal;
+        }
+
+    }
+
+    @media (max-width: 500px) {
+
+        .Container {
+            width: min(100% - 20px, 1050px);
+        }
+
+        .Intro {
+            padding: 22px 17px;
+        }
+
+        .About {
+            padding: 22px;
+        }
+
+        .Album {
+            padding: 15px;
+        }
+
+        .MusicItem {
+            align-items: flex-start;
+            flex-direction: column;
+        }
+
+        .DonationForm {
+            flex-direction: column;
+        }
+
+        .DonateButton {
+            width: 100%;
+        }
+
+        .DonationBox {
+            padding: 22px;
+        }
+
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+            scroll-behavior: auto !important;
+        }
+
+    }
+
+</style>
+
+<script type="application/ld+json">
+
+{
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "name": "Koda Kys",
+    "url": "https://kodakys.com/",
+    "mainEntity": {
+        "@type": "Person",
+        "name": "Kaiden Queen",
+        "alternateName": "Koda Kys",
+        "url": "https://kodakys.com/",
+        "sameAs": [
+            "https://www.youtube.com/koda.kys",
+            "https://www.instagram.com/koda.kys",
+            "https://open.spotify.com/koda.kys"
+        ]
+    }
+}
+
+</script>
+
+</head>
+
+<body>
+
+<div class="Page">
+
+<header class="Header">
+
+<div class="Logo">
+    <span>KODA KYS</span>
+</div>
+
+<div class="Official">
+    Official Website
+</div>
+
+</header>
+
+<main class="Container">
+
+<section class="Intro">
+
+<h1>KODA KYS</h1>
+
+<p>
+    Official website of <span>Kaiden Queen.</span>
+</p>
+
+</section>
+
+<section class="Section">
+
+<div class="SectionTitle">
+    <h2>NEW MERCH</h2>
+    <span></span>
+</div>
+
+<a href="merch.html" class="MerchCTA">
+
+    <h3>NEW MERCH OUT NOW</h3>
+
+    <p>
+        Check out the latest <span>Koda Kys</span> merchandise.
+    </p>
+
+</a>
+
+</section>
+
+<section class="Section">
+
+<div class="SectionTitle">
+    <h2>ABOUT</h2>
+    <span></span>
+</div>
+
+<div class="About">
+
+    <p>
+        <span>Koda Kys</span> is the artist project of Kaiden Queen.
+        Explore the music, releases, photos and everything
+        surrounding <span>Koda Kys</span> here.
+    </p>
+
+</div>
+
+</section>
+
+<section class="Section">
+
+<div class="SectionTitle">
+    <h2>COMING SOON</h2>
+    <span></span>
+</div>
+
+<div class="Album">
+
+    <img
+        src="Images/AlbumJATL.png"
+        alt="I WAS JUST ABOUT TO LEAVE album artwork"
+    >
+
+    <div class="AlbumInfo">
+
+        <h3>
+            Coming Soon
+        </h3>
+
+        <p>
+            Coming soon.
+        </p>
+
+        <a
+            href="https://open.spotify.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="Button"
+        >
+            Listen On Spotify
+        </a>
+
+    </div>
+
+</div>
+
+</section>
+
+<section class="Section">
+
+<div class="SectionTitle">
+    <h2>NEW RELEASES</h2>
+    <span></span>
+</div>
+
+<div class="MusicList">
+
+    <a
+        href="#"
+        class="MusicItem"
+    >
+
+        <div>
+
+            <h3>Soon</h3>
+
+            <p>Latest release</p>
+
+        </div>
+
+        <span>→</span>
+
+    </a>
+
+</div>
+
+</section>
+
+<section class="Section">
+
+<div class="SectionTitle">
+    <h2>TOP 3</h2>
+    <span></span>
+</div>
+
+<div class="TopThree">
+
+    <div class="TopItem">
+
+        <div class="TopNumber">
+            01
+        </div>
+
+        <h3>
+            Soon
+        </h3>
+
+        <p>
+            <span>Koda Kys</span>
+        </p>
+
+    </div>
+
+    <div class="TopItem">
+
+        <div class="TopNumber">
+            02
+        </div>
+
+        <h3>
+            Soon
+        </h3>
+
+        <p>
+            <span>Koda Kys</span>
+        </p>
+
+    </div>
+
+    <div class="TopItem">
+
+        <div class="TopNumber">
+            03
+        </div>
+
+        <h3>
+            Soon
+        </h3>
+
+        <p>
+            <span>Koda Kys</span>
+        </p>
+
+    </div>
+
+</div>
+
+</section>
+
+<section class="Section">
+
+<div class="SectionTitle">
+    <h2>KODA KYS</h2>
+    <span></span>
+</div>
+
+<div class="SexyCoda">
+
+    <img
+        src="Images/Image1.jpg"
+        alt="Koda Kys"
+    >
+
+    <img
+        src="Images/Image2.jpg"
+        alt="Koda Kys"
+    >
+
+    <img
+        src="Images/Image3.jpg"
+        alt="Koda Kys"
+    >
+
+</div>
+
+</section>
+
+<section class="Section">
+
+<div class="SectionTitle">
+    <h2>FIND KODA KYS</h2>
+</div>
+
+<div class="Socials">
+
+    <a
+        href="https://www.instagram.com/koda.kys"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="Social"
+    >
+        Instagram
+    </a>
+
+    <a
+        href="https://www.youtube.com/koda.kys"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="Social"
+    >
+        YouTube
+    </a>
+
+    <a
+        href="https://open.spotify.com/koda.kys"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="Social"
+    >
+        Spotify
+    </a>
+
+    <a
+        href="#"
+        class="Social"
+    >
+        TikTok
+    </a>
+
+</div>
+
+</section>
+
+<section class="Quote">
+
+<h2>
+    Fuck With Fire, You Get <span>BURNED</span>!
+</h2>
+
+</section>
+
+<section class="Section">
+
+<div class="SectionTitle">
+    <h2>SUPPORT THE WEB</h2>
+    <span></span>
+</div>
+
+<div class="Support">
+
+    <div class="DonationBox">
+
+        <h3>
+            SUPPORT FIZOGON (Web Designer)
+        </h3>
+
+        <p>
+            Enter an amount to support the website.
+        </p>
+
+        <form class="DonationForm" id="DonationForm">
+
+            <input
+                type="number"
+                id="DonationAmount"
+                class="DonationInput"
+                min="1"
+                step="0.01"
+                inputmode="decimal"
+                placeholder="Amount in GBP"
+                aria-label="Donation amount"
+                required
+            >
+
+            <button
+                type="submit"
+                class="DonateButton"
+            >
+                Donate
+            </button>
+
+        </form>
+
+        <div
+            class="DonationError"
+            id="DonationError"
+            aria-live="polite"
+        ></div>
+
+    </div>
+
+</div>
+
+</section>
+
+</main>
+
+<footer>
+
+<ul>
+
+<li>
+    © 2026 Koda Kys. All rights reserved.
+</li>
+
+<li class="FooterDesigner">
+    Website Designed By <span>Fizogon</span>
+</li>
+
+<li>
+    fizogonbusiness@gmail.com
+</li>
+
+</ul>
+
+</footer>
+
+</div>
+
+<div class="CookiePopup" id="CookiePopup">
+
+<h3>
+    Cookies
+</h3>
+
+<p>
+    This website uses essential cookies to remember your preferences.
+    No advertising or tracking cookies are used.
+</p>
+
+<div class="CookieButtons">
+
+<button id="AcceptCookies">
+    Accept
+</button>
+
+<button id="IgnoreCookies">
+    Ignore
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+    const CookiePopup = document.getElementById("CookiePopup");
+    const AcceptCookies = document.getElementById("AcceptCookies");
+    const IgnoreCookies = document.getElementById("IgnoreCookies");
+
+    if (localStorage.getItem("kodakys_cookie_consent")) {
+        CookiePopup.style.display = "none";
+    }
+
+    AcceptCookies.onclick = function () {
+        localStorage.setItem("kodakys_cookie_consent", "accepted");
+
+        CookiePopup.style.opacity = "0";
+        CookiePopup.style.transform = "translateY(30px)";
+
+        setTimeout(function () {
+            CookiePopup.style.display = "none";
+        }, 400);
+    };
+
+    IgnoreCookies.onclick = function () {
+        localStorage.setItem("kodakys_cookie_consent", "ignored");
+
+        CookiePopup.style.opacity = "0";
+        CookiePopup.style.transform = "translateY(30px)";
+
+        setTimeout(function () {
+            CookiePopup.style.display = "none";
+        }, 400);
+    };
+
+    const DonationForm = document.getElementById("DonationForm");
+    const DonationAmount = document.getElementById("DonationAmount");
+    const DonationError = document.getElementById("DonationError");
+
+    DonationForm.addEventListener("submit", function (Event) {
+
+        Event.preventDefault();
+
+        const Amount = Number(DonationAmount.value);
+
+        if (!Number.isFinite(Amount) || Amount <= 0) {
+            DonationError.textContent = "Please enter a valid donation amount.";
+            return;
+        }
+
+        const RoundedAmount = Amount.toFixed(2);
+
+        DonationError.textContent = "";
+
+        window.location.href = "https://paypal.me/fizogon/" + RoundedAmount;
+
+    });
+
+    const AnimatedSections = document.querySelectorAll(".Section, .Quote");
+
+    const Observer = new IntersectionObserver(function (Entries) {
+
+        Entries.forEach(function (Entry) {
+
+            if (Entry.isIntersecting) {
+                Entry.target.classList.add("Visible");
+            }
+
+        });
+
+    }, {
+        threshold: 0.12
+    });
+
+    AnimatedSections.forEach(function (Section) {
+        Observer.observe(Section);
+    });
+
+</script>
+
+</body>
+
+</html>
